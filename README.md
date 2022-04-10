@@ -29,8 +29,11 @@ testoptDiskLoc:
 - loads digitimages data for testing and training
 - reduces data for speed
 - lower kRange and NRange to make the program faster
-- 
 ---------------------------------------------------
 optimalDiskLoc:
-- minmizes U N - Y 
+- minmizes U N - Y to find best disk location to get the ML algorithm. The disks are infinitesimally small.
+---------------------------------------------------
+testgetOptCircles
+- Similar to optimalDiskLoc, but uses not infinitesimally small disks instead tries different sized disks.
+- Results are not very satisfying.
 ---------------------------------------------------
