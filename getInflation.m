@@ -1,5 +1,10 @@
 function RMat_new = getInflation(r_inc_Data, rExt, ZetaExt, NFourier, k)
-
+%PRE: r_inc_Data array of real pos number. sorted, ascending
+%     rExt real pos number
+%     ZetaExt 2 x 1 real vector
+%     NFourier pos real integer, ideally a power of 2
+%     k pos real number
+%Desc: Computes the remainder Matrix of the points at the circle at ZetaExt with radius rExt.
 eg=0.57721566490153286060651209008240243104215933593992;
 twopi=2*pi;
 fourpi=4*pi;
@@ -18,7 +23,7 @@ tPts_ip = linspace(-pi,pi,NFourier+1);
 tPts_ip = tPts_ip(1:end-1);
 
 
-%PRE -Computation
+%PRE-Computation
 sigmaMat_init=repmat(circshift(interp1(Dom_Null.theta,Dom_Null.sigma,theta_ip),NFourier/2,2).',1,NFourier);
 CosMat=cos((tPts_ip)-(tPts_ip).');
 sqrt2CosMat=sqrt(2-2*CosMat);
