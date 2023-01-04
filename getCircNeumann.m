@@ -1,7 +1,9 @@
 function BigN = getCircNeumann(r_center_Coords, r_init, r_end, r_amount, NFourier,k)
-%PRE:  
-%POST: 
-%Desc: 
+%PRE:  r_center_Coords is a 2 x NCenters real matrix
+%      r_init, r_end are a real numbers
+%      r_amount, NFourier is an pos integer
+%      k is a pos real number
+%Desc: Returns a (NFourier*NCenters)^2 matrix. Represents the Neumann Function
 % NFourier must be even! Preferably has low prime divisors.
 
 %% Notes
