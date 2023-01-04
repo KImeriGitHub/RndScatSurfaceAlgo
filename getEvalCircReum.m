@@ -1,8 +1,6 @@
 function [RVals, z1x0RVals, z2x0RVals, z0x1RVals, z0x2RVals, ...
     z1x1RVals, z2x1RVals, z1x2RVals, z2x2RVals] = getEvalCircReum(z, x, BigN, r_center_Coords, r_end, NFourier,k)
-%PRE:  
-%POST: 
-%Desc: 
+%DESC: Same as getEvalCircNeum but only evaluating the remainder function.
 
 NCenters=length(r_end);
 Nz = size(z,2);
