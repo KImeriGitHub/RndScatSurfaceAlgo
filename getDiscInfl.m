@@ -3,8 +3,8 @@ function [R_Cos, R_Sin]= getDiscInfl(R_Cos, R_Sin, RTens, r, R, k, dPts, DDG2_FC
 %     RTens is a complex 5 x 5 x 5 x 5 x 7 tensor
 %     CenterIdx is a (2 x NCenter) matrix of pos Integer
 %     r, R, k are positive real numbers, R>r
-%POST:
-%DESC: Via the input from getOptCircles
+%DESC: Via the input from getOptCircles. 
+% Inflates Disc and returns the corresponding Fouriercoefficients in R_Cos and R_Sin.
 
 NFourier  = size(R_Cos,1);
 NZGridRow = size(R_Cos,1);
