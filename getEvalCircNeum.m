@@ -1,8 +1,15 @@
 function [NVals, z1x0NVals, z2x0NVals, z0x1NVals, z0x2NVals, ...
     z1x1NVals, z2x1NVals, z1x2NVals, z2x2NVals, NValsEX] = getEvalCircNeum(z, x, BigN, r_center_Coords, r_end, NFourier,k)
-%PRE:  
-%POST: 
-%Desc: 
+%PRE:  z is a 2 x Nz matrix of real values
+%      x is a 2 x Nx matrix of real values
+%      BigN is a (NCenters*NFourier)^2 matrix
+%      r_center_Coords is a 2 x NCenters real matrix
+%      r_end is a NCenters array
+%      NFourier is a pos integer. Ideally a power of 2
+%      k is a pos real number
+%POST: All matrices of size Nz x Nx
+%Desc: Neumann function evaluation with source z and receiver x. 
+%   Also including partial derivatives. NValsEx Excludes the Gamma function, but else is the same as NVals.
 
 NCenters=length(r_end);
 Nz = size(z,2);
